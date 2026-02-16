@@ -1,0 +1,42 @@
+{
+  "debate_rounds": 2,
+  "models": [
+    {
+      "name": "chatgpt",
+      "provider": "openai",
+      "base_url": "https://api.openai.com/v1",
+      "model": "gpt-4o-mini",
+      "api_key_env": "OPENAI_API_KEY",
+      "temperature": 0.2,
+      "max_tokens": 1500
+    },
+    {
+      "name": "qwen",
+      "provider": "qwen",
+      "base_url": "https://dashscope.aliyuncs.com/compatible-mode/v1",
+      "model": "qwen-plus",
+      "api_key_env": "DASHSCOPE_API_KEY",
+      "temperature": 0.2,
+      "max_tokens": 1500
+    }
+  ],
+  "crawler": {
+    "provider": "firecrawl",
+    "base_url": "https://api.firecrawl.dev",
+    "api_key_env": "FIRECRAWL_API_KEY"
+  },
+  "notifications": {
+    "wecom": {
+      "enabled": false,
+      "webhook_url_env": "WECOM_WEBHOOK_URL"
+    },
+    "feishu": {
+      "enabled": false,
+      "webhook_url_env": "FEISHU_WEBHOOK_URL"
+    },
+    "discord": {
+      "enabled": false,
+      "webhook_url_env": "DISCORD_WEBHOOK_URL"
+    }
+  }
+}
